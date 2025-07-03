@@ -1,3 +1,10 @@
+项目是 krystal的 核心合约
+
+注意：危险  setApprovalForAll(address operator,bool approved)
+Uniswap的 ERC721Permit_v4的能力，owner 将 Uniswap LP token (NFT)的完全处理权限 给了   krystal 调仓合约。
+说明：这个代码是 前端发起的，直接调用 协议合约，因此你这两里看不到代码
+
+
 # Introduction
 
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
