@@ -8,6 +8,18 @@ Uniswap的 ERC721Permit_v4的能力，owner 将 Uniswap LP token (NFT)的完全�
 
 
 
+用户设置的自动调仓策略，链上并不会验证，管理员有作恶空间。
+流程
+- 用户设置自动调仓策略， 离线签名
+  - 策略包含① Trigger （下次什么时候调仓）② 新的边界范围  等。
+- Krystal 后端服务，对其解析，变成要调仓的参数，直接去调仓
+  - 链上并不对策略内容与  用户签名信息做比对
+%自动调仓策略的设定有些复杂，体验不是很顺滑，有些设计也不是很合理，例如gas fee 上限是按照 volume 比例来算。
+
+
+
+
+
 用户： 创建仓位
 [图片]
 https://github.com/KrystalDeFi/v3utils/blob/3dcbdfe82f0b60341cfe7a1354167808afab49e3/src/V3Utils.sol#L436
